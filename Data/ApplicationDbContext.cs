@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using StoreAPI.Models;
 
-namespace StoreAPI.Models;
+namespace StoreAPI.Data;
 
 public partial class ApplicationDbContext : DbContext
 {
@@ -11,7 +12,7 @@ public partial class ApplicationDbContext : DbContext
     {
     }
 
-    public virtual DbSet<category> categories { get; set; }
+    public virtual DbSet<category> categories { get; set; } //categories add s is Object to use in another file code 
 
     public virtual DbSet<product> products { get; set; }
 
