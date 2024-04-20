@@ -102,3 +102,4 @@
 /Users/hakeemee1/Applications/StoreAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/hakeemee1/Applications/StoreAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/hakeemee1/Applications/StoreAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/hakeemee1/Applications/StoreAPI/obj/Debug/net8.0/StoreAPI.sourcelink.json
