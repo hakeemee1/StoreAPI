@@ -1,23 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using StoreAPI.Models;
 
 namespace StoreAPI.Data;
-
-public partial class ApplicationDbContext : DbContext
+public partial class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<category> categories { get; set; } //categories add s is Object to use in another file code 
+    public virtual DbSet<category> categories { get; set; }
 
     public virtual DbSet<product> products { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // เพิ่มส่วนนี้เข้าไป
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<category>(entity =>
         {
             entity.HasKey(e => e.category_id).HasName("categories_pkey");
