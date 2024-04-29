@@ -16,11 +16,13 @@ Authorization: Bearer {{StoreAPI_AccessToken}}
 // Get product by id
 GET {{StoreAPI_HostAddress}}/Product/3
 Accept: application/json
+Authorization: Bearer {{StoreAPI_AccessToken}}
 
 ###
 
 // Add new product
 POST {{StoreAPI_HostAddress}}/Product
+Authorization: Bearer {{StoreAPI_AccessToken}}
 Content-Type: application/json
 Accept: application/json
 
@@ -38,6 +40,7 @@ Accept: application/json
 
 // Update product
 PUT {{StoreAPI_HostAddress}}/Product/5
+Authorization: Bearer {{StoreAPI_AccessToken}}
 Content-Type: application/json
 Accept: application/json
 
@@ -55,4 +58,5 @@ Accept: application/json
 
 // Delete product
 DELETE {{StoreAPI_HostAddress}}/Product/5
+Authorization: Bearer {{StoreAPI_AccessToken}}
 Accept: application/json

@@ -28,6 +28,7 @@ public class ProductController : ControllerBase
 
     // ทดสอบเขียนฟังก์ชันการเชื่อมต่อ database
     // GET: /api/Product/testconnectdb
+    [AllowAnonymous]
     [HttpGet("testconnectdb")]
     public void TestConnection()
     {
