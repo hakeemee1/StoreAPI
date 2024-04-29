@@ -98,7 +98,6 @@ public class AuthenticateController : ControllerBase
         };
 
         var result = await _userManager.CreateAsync(user, model.Password!);
-
         if (!result.Succeeded)
             return StatusCode(
                 StatusCodes.Status500InternalServerError, 
@@ -114,6 +113,8 @@ public class AuthenticateController : ControllerBase
             await _roleManager.CreateAsync(new IdentityRole(UserRoles.Manager));
         if (!await _roleManager.RoleExistsAsync(UserRoles.User))
             await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+        
+        await _userManager.AddToRoleAsync(user, UserRoles.User);
 
         return Ok(new Response { Status = "Success", Message = "User created successfully!" });
     }
