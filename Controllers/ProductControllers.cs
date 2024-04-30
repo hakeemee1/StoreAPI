@@ -28,21 +28,21 @@ public class ProductController : ControllerBase
 
     // ทดสอบเขียนฟังก์ชันการเชื่อมต่อ database
     // GET: /api/Product/testconnectdb
-    [AllowAnonymous]
-    [HttpGet("testconnectdb")]
-    public void TestConnection()
-    {
-        // ถ้าเชื่อมต่อได้จะแสดงข้อความ "Connected"
-        if (_context.Database.CanConnect())
-        {
-            Response.WriteAsync("Connected");
-        }
-        // ถ้าเชื่อมต่อไม่ได้จะแสดงข้อความ "Not Connected"
-        else
-        {
-            Response.WriteAsync("Not Connected");
-        }
-    }
+    // [AllowAnonymous]
+    // [HttpGet("testconnectdb")]
+    // public void TestConnection()
+    // {
+    //     // ถ้าเชื่อมต่อได้จะแสดงข้อความ "Connected"
+    //     if (_context.Database.CanConnect())
+    //     {
+    //         Response.WriteAsync("Connected");
+    //     }
+    //     // ถ้าเชื่อมต่อไม่ได้จะแสดงข้อความ "Not Connected"
+    //     else
+    //     {
+    //         Response.WriteAsync("Not Connected");
+    //     }
+    // }
 
     // ฟังก์ชันสำหรับการดึงข้อมูลสินค้าทั้งหมด
     // GET: /api/Product
