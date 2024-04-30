@@ -6,9 +6,9 @@ POST {{AuthAPI_HostAddress}}/register
 Content-Type: application/json
 
 {
-  "username": "iamsamit",
-  "email": "Tester@email.com",
-  "password": "Samit@1234"
+  "username": "mutim",
+  "email": "Mutim1@gmail.com",
+  "password": "Mutim@1234"
 }
 
 ###
