@@ -36,4 +36,18 @@ public class CategoryController : ControllerBase
         ).ToList();
         return Ok(categories);
     }
+
+    //Get: /api/Category/{id}
+    //get category by id
+    [HttpGet("{id}")]
+    public ActionResult<category> GetCategries(int id) 
+    {
+        var category = _context.categories.FirstOrDefault(c => c.category_id == id);
+        if (category == null) 
+        {
+            return NotFound();
+        } 
+        return Ok(category); 
+    }
+
 } 
